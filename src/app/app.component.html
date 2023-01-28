@@ -1,3 +1,13 @@
 Loupedeck
 
-<button (click)="onStartClicked()">Start</button>
+
+<button (click)="onDiscoverClicked()">Discover</button>
+
+<button (click)="onForgetClicked()">Forget all devices</button>
+
+<ng-container *ngFor="let device of devices$|async">
+  <div >{{device.productName}}</div>
+
+</ng-container>
+
+{{readData$ | async}}

@@ -6,7 +6,7 @@ import { finalize, first, share, take } from 'rxjs/operators';
  *
  * Example
  import {from} from 'rxjs/observable/from';
- 
+
  from([1, 2, 3])
  .pipe(doOnSubscribe(() => console.log('subscribed to stream')))
  .subscribe(x => console.log(x), null, () => console.log('completed'));
