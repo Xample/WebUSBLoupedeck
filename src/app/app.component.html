@@ -10,4 +10,9 @@ Loupedeck
 
 </ng-container>
 
-{{readData$ | async}}
+
+<ng-container *ngIf="chunks$|async as chunk">
+  <div >{{decodeAsHex(chunk.data )}} | {{chunk.status}}</div>
+
+</ng-container>
+
